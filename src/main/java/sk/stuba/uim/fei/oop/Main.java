@@ -9,11 +9,13 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args){
 
-       ConcreteIndex ci = new ConcreteIndex();
+       IntefaceIndex ci = new IntefaceIndex();
        ci.add(new Message("hello"));
        ci.add(new Message("world"));
-       ci.add(new Message("hello world"));
+        ci.add(new Address("hodzovo nam", "245168"));
 
-        System.out.println(ci);
+        var old = ci.add(new Message("hello world"));
+
+        System.out.println(old);
     }
 }
